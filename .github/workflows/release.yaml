@@ -16,7 +16,7 @@ jobs:
       matrix:
         nif: ["2.17"]
         job:
-          - { target: x86_64-unknown-linux-musl   , os: ubuntu-24.04  }
+          - { target: x86_64-unknown-linux-musl   , os: ubuntu-20.04  }
 
     steps:
     - name: Checkout source code
@@ -43,6 +43,7 @@ jobs:
         target: ${{ matrix.job.target }}
         nif-version: ${{ matrix.nif }}
         use-cross: ${{ matrix.job.use-cross }}
+        cross-version: ${{ matrix.job.cross-version || 'from-source' }}
         project-dir: "native/ex_extractous"
 
     - name: Artifact upload
