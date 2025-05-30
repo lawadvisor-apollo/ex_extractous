@@ -1,10 +1,12 @@
 defmodule ExExtractous.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :ex_extractous,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       package: package(),
