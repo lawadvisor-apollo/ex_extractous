@@ -53,7 +53,7 @@ jobs:
         nif-version: ${{ matrix.nif }}
         use-cross: ${{ matrix.job.use-cross }}
         cross-version: ${{ matrix.job.cross-version || 'from-source' }}
-        project-dir: "native/ex_extractous"
+        project-dir: "./"
 
     - name: Artifact upload
       uses: actions/upload-artifact@v4
