@@ -21,7 +21,6 @@ jobs:
           - { target: x86_64-unknown-linux-musl   , os: ubuntu-24.04 , use-cross: true }
 
     env:
-        DRY_RUN: true
         RUSTLER_NIF_VERSION: ${{ matrix.nif }}
     steps:
     - name: Checkout source code
