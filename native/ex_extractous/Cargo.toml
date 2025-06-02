@@ -16,9 +16,3 @@ openssl = { version = "0.10", features = ["vendored"] }
 
 [features]
 nif_version_2_17 = ["rustler/nif_version_2_17"]
-
-[workspace.metadata.cross.target.x86_64-unknown-linux-musl]
-pre-build = [
-    "dpkg --add-architecture $CROSS_DEB_ARCH",
-    "apt-get update && apt-get --assume-yes install libssl-dev:$CROSS_DEB_ARCH"
-]
