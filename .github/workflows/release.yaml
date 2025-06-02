@@ -72,4 +72,4 @@ jobs:
       if: always()
       shell: bash
       run: |
-        ls
+        ls ./target/*
