@@ -16,3 +16,6 @@ openssl = { version = "0.10", features = ["vendored"] }
 
 [features]
 nif_version_2_17 = ["rustler/nif_version_2_17"]
+
+[build-dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
