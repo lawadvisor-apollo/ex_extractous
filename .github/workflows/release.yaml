@@ -72,4 +72,4 @@ jobs:
       if: always()
       shell: bash
       run: |
-        pwd && ls ./target/x86_64-unknown-linux-musl/*
+        pwd && ls ./target/x86_64-unknown-linux-musl/release/*
