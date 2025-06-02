@@ -43,10 +43,6 @@ jobs:
         toolchain: stable
         target: ${{ matrix.job.target }}
         
-    - name: Install OpenSSL dependencies
-      run: |
-        sudo apt-get install pkg-config libssl-dev
-
     - name: Build the project
       id: build-crate
       uses: philss/rustler-precompiled-action@v1.1.4
