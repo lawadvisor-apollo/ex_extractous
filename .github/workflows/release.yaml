@@ -35,8 +35,8 @@ jobs:
     - name: Set OPENSSL_DIR
       shell: bash
       run: |
-        # Get the project version from mix.exs
         echo "OPENSSL_DIR=$(which openssl)" >> $GITHUB_ENV
+        echo "PKG_CONFIG_PATH=$(which pkg-config)" >> $GITHUB_ENV
 
     - name: Add target
       shell: bash
