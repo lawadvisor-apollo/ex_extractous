@@ -27,3 +27,4 @@ ex_extractous-*.tar
 
 # Rust binary artifacts
 /native/ex_extractous/target/
+/target/
