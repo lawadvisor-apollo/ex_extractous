@@ -73,4 +73,5 @@ jobs:
       if: always()
       shell: bash
       run: |
-        pwd && ls ./target/x86_64-unknown-linux-musl/release/*
+        pwd
+        ls -R target/*/release/build/extractous-*/out/tika-native/build
