@@ -22,7 +22,6 @@ jobs:
 
     env:
         RUSTLER_NIF_VERSION: ${{ matrix.nif }}
-        RUST_BACKTRACE: 1
     steps:
     - name: Checkout source code
       uses: actions/checkout@v3
@@ -49,6 +48,9 @@ jobs:
         use-cross: ${{ matrix.job.use-cross }}
         cross-version: ${{ matrix.job.cross-version || 'from-source' }}
         project-dir: "./"
+      env:
+        RUST_BACKTRACE: 1
+        GRADLE_USER_HOME: ${{ github.workspace }}/.gradle
 
     - name: Artifact upload
       uses: actions/upload-artifact@v4
