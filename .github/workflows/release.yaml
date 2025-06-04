@@ -113,6 +113,9 @@ jobs:
             TIKA_LIB="$TIKA_LIB"
         fi
 
+        LIBS=$(find target -type d -path "*/extractous-*/out/libs")
+        cp "$LIBS" "$TEMP_DIR/libs"
+
         if [[ "${{ matrix.job.target }}" == *darwin* ]]; then
             echo "Before mods:"
             otool -L "$NIF_LIB"
