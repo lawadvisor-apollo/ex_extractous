@@ -1,4 +1,4 @@
-defmodule ExExtractous do
+defmodule ExExtractous.Native do
   version = Mix.Project.config()[:version]
 
   use RustlerPrecompiled,
@@ -14,5 +14,5 @@ defmodule ExExtractous do
     version: version
 
   def extract(_path, _as_xml), do: :erlang.nif_error(:nif_not_loaded)
-  def extract_with_ocr(_path, as_xml), do: :erlang.nif_error(:nif_not_loaded)
+  def extract_with_ocr(_path, _as_xml), do: :erlang.nif_error(:nif_not_loaded)
 end

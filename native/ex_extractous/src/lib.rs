@@ -27,4 +27,4 @@ fn extract_from_file(extractor: Extractor, file_path: &str) -> NifResult<(String
 }
 
 
-rustler::init!("Elixir.ExExtractous");
+rustler::init!("Elixir.ExExtractous.Native");
