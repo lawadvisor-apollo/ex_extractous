@@ -19,6 +19,7 @@ jobs:
         nif: ["2.17"]
         job:
           - { target: x86_64-unknown-linux-musl, os: ubuntu-22.04 }
+          - { target: x86_64-unknown-linux-gnu, os: ubuntu-22.04 }
 
     env:
         RUSTLER_NIF_VERSION: ${{ matrix.nif }}
@@ -82,7 +83,7 @@ jobs:
         fi
 
         TIKA_LIB=$(find target -type f -path "*/libs/libtika_native.*" 2>/dev/null)
-        TIKA_BUILD_LIB=$(find target -type f -path "*/nativeCompile/libtika_native.{so,dylib}" 2>/dev/null)
+        TIKA_BUILD_LIB=$(find target -type f -path "*/nativeCompile/libtika_native.so" 2>/dev/null)
 
         echo "Found tika libraries at:"
         echo "Build lib: $TIKA_BUILD_LIB"
