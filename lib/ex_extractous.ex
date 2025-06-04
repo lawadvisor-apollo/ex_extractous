@@ -4,7 +4,11 @@ defmodule ExExtractous do
   use RustlerPrecompiled,
     otp_app: :ex_extractous,
     crate: "ex_extractous",
-    targets: ~w(x86_64-unknown-linux-musl),
+    targets: ~w(
+      x86_64-unknown-linux-gnu
+      x86_64-unknown-linux-musl
+    ),
+    nif_versions: ["2.17"],
     base_url: "https://github.com/lawadvisor-apollo/ex_extractous/releases/download/v#{version}",
     force_build: System.get_env("EX_EXTRACTOUS_BUILD") in ["1", "true"],
     version: version
