@@ -10,7 +10,7 @@ defmodule ExExtractous do
     ),
     nif_versions: ["2.17"],
     base_url: "https://github.com/lawadvisor-apollo/ex_extractous/releases/download/v#{version}",
-    force_build: System.get_env("EX_EXTRACTOUS_BUILD") in ["1", "true"],
+    force_build: System.get_env("EXTRACTOUS_BUILD") in ["1", "true"],
     version: version
 
   def extract(_path, _as_xml), do: :erlang.nif_error(:nif_not_loaded)
