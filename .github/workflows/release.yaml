@@ -72,10 +72,3 @@ jobs:
         files: |
           ${{ steps.build-crate.outputs.file-path }}
       if: startsWith(github.ref, 'refs/tags/')
-
-    - name: List files
-      if: always()
-      shell: bash
-      run: |
-        pwd
-        ls -R target/*/release/build/extractous-*/out/tika-native/build
