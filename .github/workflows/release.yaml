@@ -114,7 +114,9 @@ jobs:
         fi
 
         LIBS=$(find target -type d -path "*/extractous-*/out/libs")
-        cp -r "$LIBS" "$TEMP_DIR"
+        for dir in $LIBS; do
+          cp -r "$dir"/* "$TEMP_DIR"
+        done
 
         if [[ "${{ matrix.job.target }}" == *darwin* ]]; then
             echo "Before mods:"
